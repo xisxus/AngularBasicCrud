@@ -1,0 +1,91 @@
+<p>create-product works!</p>
+
+
+<div>
+    <div>
+        <h1>Catagory</h1>
+        <label for="">Catagory Name</label>
+        <input type="text" name="" id="" [(ngModel)]="prodNcata.name" >
+    </div>
+
+    <div>
+        <h1>Product</h1>
+        <label for="">Product Name</label>
+        <input type="text" name="" id="" [(ngModel)]="product.name" >
+    </div>
+    
+    <div>
+        <label for="">color</label>
+        <input type="text" name="" id="" [(ngModel)]="product.color" >
+    </div>
+
+    <div>
+        <label for="">productNumber </label>
+        <input type="text" name="" id="" [(ngModel)]="product.productNumber" >
+    </div>
+
+    <div>
+        <label for="">standardCost </label>
+        <input type="number" name="" id="" [(ngModel)]="product.standardCost" >
+    </div>
+
+    <div>
+        <label for="">listPrice </label>
+        <input type="number" name="" id="" [(ngModel)]="product.listPrice" >
+    </div>
+
+    <div>
+        <label for="">size </label>
+        <input type="number" name="" id="" [(ngModel)]="product.size" >
+    </div>
+
+    <div>
+        <label for="">weight </label>
+        <input type="number" name="" id="" [(ngModel)]="product.weight" >
+    </div>
+
+    <div>
+        <button (click)="addPro()">AddProduct</button>
+        <button (click)="AddNCata()">AddProductNCatagoryForApi</button>
+    </div>
+
+
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+             
+                <th>Name</th>
+                <th>Product Number</th>
+                <th>Color</th>
+                <th>Standard Cost</th>
+                <th>List Price</th>
+                <th>Size</th>
+                <th>Weight</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              @for (p of temPro; track $index) {
+
+            <tr>
+             
+              <td>{{p.name}}</td>
+              <td>{{p.productNumber}}</td>
+              <td>{{p.color}}</td>
+              <td>{{p.standardCost}}</td>
+              <td>{{p.listPrice}}</td>
+              <td>{{p.size}}</td>
+              <td>{{p.weight}}</td>
+              <td>
+                <button (click)="edit(p)">Edit</button>
+                <button (click)="del(p)">Delet</button>
+              </td>
+            </tr>
+
+          }
+          </tbody>
+          </table>
+    </div>
+</div>
