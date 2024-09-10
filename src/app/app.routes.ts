@@ -6,7 +6,7 @@ import { CreateProductComponent } from './Componenet/create-product/create-produ
 export const routes: Routes = [
     
   {path: '' , component : ViewProductComponent},
-  {path: 'product' , component : ViewProductComponent} ,
+  // {path: 'product' , component : ViewProductComponent} ,
   {path: 'product/edit/:id' , component : EditProductComponent} ,
 
   {path: 'product/create' , component : CreateProductComponent},

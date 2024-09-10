@@ -6,4 +6,9 @@ export interface Prod {
     listPrice: 0,
     size: 0,
     weight: 0,
+    productCategoryID?: 0,
+      productCategory? : {
+        ProductCategoryID: 0,
+        name: ""
+      }
 }
